@@ -6,7 +6,7 @@ describe('Tests the main showcase function', () => {
   //   handleRepo({ name: "showcase.js", description: "test" }, "cnnr-adams")
   //     .catch(err => assert(true));
   // });
-  it('Tests showcase fn', async () => {
-    showcase("cnnr-adams").then(res => assert(true)).catch(err => assert(false, err));
+  it('Tests showcase fn', function () {
+    return (showcase());
   })
 });
