@@ -1,10 +1,6 @@
 /* eslint-disable no-console */
-const defaultAwesomeFunction = require('../lib').default;
-const { awesomeFunction } = require('../lib');
+const showcase = require('../lib');
 
-const defaultVal = defaultAwesomeFunction('Connor');
-const val = awesomeFunction();
+const userShowcase = showcase('cnnr-adams');
 
-console.log(defaultVal);
-// val === 'I am just an Awesome Function'
-console.log(val);
+console.log(userShowcase);

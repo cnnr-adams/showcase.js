@@ -1,14 +1,12 @@
 import { assert } from 'chai';
-import defaultAwesomeFunction, { awesomeFunction } from '../src';
+import showcase, { handleRepo, handleRepos } from '../src';
 
-describe('Awesome test.', () => {
-  it('should test default awesome function', () => {
-    const expectedVal = 'Testing default function - Connor'
-    assert(defaultAwesomeFunction('Connor') === expectedVal, 'Default not awesome :(');
-  });
-
-  it('should test awesome function', () => {
-    const expectedVal = 'I am just an Awesome Function'
-    assert(awesomeFunction() === expectedVal, 'Named awesome :(');
-  });
+describe('Tests the main showcase function', () => {
+  // it('Tests current repo for showcase.json', async () => {
+  //   handleRepo({ name: "showcase.js", description: "test" }, "cnnr-adams")
+  //     .catch(err => assert(true));
+  // });
+  it('Tests showcase fn', async () => {
+    showcase("cnnr-adams").then(res => assert(true)).catch(err => assert(false, err));
+  })
 });
